@@ -2,7 +2,6 @@
   const $ = (id) => document.getElementById(id);
   const SAVE_KEY = "perfect-human-save";
   const TYPE_SPEED = 32; // 글자당 ms
-  const rules = GAME.rules || {};
 
   const el = {
     screens: document.querySelectorAll(".screen"),
@@ -10,23 +9,21 @@
     nameForm: $("name-form"), nameInput: $("name-input"), continueBtn: $("continue-btn"),
     chapter: $("chapter-label"), progress: $("progress-bar"), muteBtn: $("mute-btn"),
     status: $("status"), statusToggle: $("status-toggle"), sName: $("status-name"), sId: $("status-id"),
-    bars: $("status-bars"), info: $("status-info"), log: $("status-log"),
+    info: $("status-info"), log: $("status-log"),
     media: $("media-box"), dialogue: $("dialogue"), speaker: $("speaker"), text: $("story-text"), advance: $("advance"),
-    quizBox: $("quiz-box"), quizTitle: $("quiz-title"), question: $("quiz-question"), choices: $("quiz-choices"),
+    quizBox: $("quiz-box"), quizTitle: $("quiz-title"), quizImage: $("quiz-image"), question: $("quiz-question"), choices: $("quiz-choices"),
     form: $("quiz-form"), input: $("quiz-input"), feedback: $("quiz-feedback"),
     hintBtn: $("hint-btn"), hint: $("quiz-hint"), nextSceneBtn: $("next-scene-btn"),
     endTitle: $("end-title"), endText: $("end-text"), endStats: $("end-stats"), restartBtn: $("restart-btn"),
-    gameover: $("gameover"), retryBtn: $("retry-btn"),
-    toasts: $("toasts"), flash: $("fx-flash"), bgm: $("bgm"),
+    flash: $("fx-flash"), bgm: $("bgm"),
   };
 
   const clone = (o) => JSON.parse(JSON.stringify(o));
-  const initialStats = () => Object.fromEntries(Object.entries(GAME.stats).map(([k, s]) => [k, s.value]));
 
   const state = {
     name: GAME.defaultName, scene: 0, line: 0, lineDone: false,
-    solved: false, videoDone: true, wrong: 0, startedAt: 0, muted: false, over: false,
-    stats: initialStats(), info: clone(GAME.info), log: [], snapshot: null,
+    solved: false, videoDone: true, wrong: 0, startedAt: 0, muted: false,
+    info: clone(GAME.info), log: [], snapshot: null,
   };
 
   const fmt = (s) => String(s ?? "").replaceAll("{name}", state.name);
@@ -73,7 +70,6 @@
         case "flash":   this.tone(1760, .6, { type: "sine", vol: .02 }); break;
         case "wrong":   this.tone(98, .35, { type: "sawtooth", vol: .06 }); this.tone(92, .35, { type: "square", vol: .03 }); break;
         case "correct": this.tone(523, .15, { vol: .05 }); this.tone(784, .4, { vol: .05, at: .12 }); break;
-        case "damage":  this.tone(160, .2, { type: "triangle", vol: .06 }); break;
       }
     },
     // 낮게 웅웅거리는 불길한 배경음
@@ -124,7 +120,7 @@
     try {
       localStorage.setItem(SAVE_KEY, JSON.stringify({
         name: state.name, scene: state.scene, wrong: state.wrong, startedAt: state.startedAt,
-        stats: state.snapshot.stats, info: state.snapshot.info, log: state.log,
+        info: state.snapshot, log: state.log,
       }));
     } catch {}
   };
@@ -149,14 +145,6 @@
     }
   }
 
-  function toast(text, bad = false) {
-    const t = document.createElement("div");
-    t.className = "toast" + (bad ? " bad" : "");
-    t.textContent = text;
-    el.toasts.appendChild(t);
-    setTimeout(() => t.remove(), 2700);
-  }
-
   function addLog(text, bad = false) {
     const time = new Date().toTimeString().slice(0, 8);
     state.log.unshift({ text: `${time} ${text}`, bad });
@@ -178,22 +166,6 @@
     el.sName.textContent = state.name;
     el.sId.textContent = state.info["피험자 번호"] || "";
 
-    el.bars.innerHTML = "";
-    for (const [key, def] of Object.entries(GAME.stats)) {
-      const v = state.stats[key], pct = Math.round((v / def.max) * 100);
-      const row = document.createElement("div");
-      row.className = "bar-row" + (changed.includes(key) ? " changed" : "");
-      const fillClass = def.danger ? (pct >= 50 ? "danger" : "") : (pct <= 25 ? "low" : "");
-      row.innerHTML = `<span class="bar-label"></span><div class="bar"><div class="bar-fill ${fillClass}"></div></div><span class="bar-val">${v}/${def.max}</span>`;
-      row.querySelector(".bar-label").textContent = def.label;
-      el.bars.appendChild(row);
-      const fill = row.querySelector(".bar-fill");
-      const prev = renderStatus.prev?.[key] ?? pct;
-      fill.style.width = prev + "%";
-      requestAnimationFrame(() => requestAnimationFrame(() => (fill.style.width = pct + "%")));
-    }
-    renderStatus.prev = Object.fromEntries(Object.entries(GAME.stats).map(([k, d]) => [k, Math.round((state.stats[k] / d.max) * 100)]));
-
     el.info.innerHTML = "";
     for (const [k, v] of Object.entries(state.info)) {
       if (k === "피험자 번호") continue;
@@ -205,54 +177,12 @@
     }
   }
 
-  function applyStats(delta, reason) {
-    if (!delta) return;
-    const changed = [];
-    let hurt = false;
-    for (const [key, d] of Object.entries(delta)) {
-      const def = GAME.stats[key];
-      if (!def || !d) continue;
-      state.stats[key] = Math.max(0, Math.min(def.max, state.stats[key] + d));
-      changed.push(key);
-      const bad = def.danger ? d > 0 : d < 0;
-      hurt ||= bad;
-      const msg = `${def.label} ${d > 0 ? "+" : ""}${d}`;
-      toast(msg, bad);
-      addLog(reason ? `${reason} · ${msg}` : msg, bad);
-    }
-    if (hurt) {
-      sound.sfx("damage");
-      el.status.classList.remove("hit"); void el.status.offsetWidth; el.status.classList.add("hit");
-    }
-    renderStatus(changed);
-    checkGameOver();
-  }
-
   function applyInfo(info) {
     if (!info) return;
     Object.assign(state.info, info);
     for (const [k, v] of Object.entries(info)) addLog(`${k}: ${fmt(v)}`);
     renderStatus(Object.keys(info));
   }
-
-  function checkGameOver() {
-    const key = rules.gameOverStat;
-    if (!key || state.over || state.stats[key] > 0) return;
-    state.over = true;
-    setTimeout(() => { el.gameover.hidden = false; effect("glitch"); }, 600);
-  }
-
-  el.retryBtn.addEventListener("click", () => {
-    el.gameover.hidden = true;
-    state.over = false;
-    state.stats = clone(state.snapshot.stats);
-    state.info = clone(state.snapshot.info);
-    // 다시 시작해도 바로 무너지지 않도록 최소 절반은 회복
-    const key = rules.gameOverStat, half = Math.ceil(GAME.stats[key].max / 2);
-    if (state.stats[key] < half) { state.stats[key] = half; state.snapshot.stats[key] = half; }
-    addLog("장면 재시작", true);
-    startScene(state.scene);
-  });
 
   // ════════════════ 미디어 ════════════════
   function placeholder(label) {
@@ -298,7 +228,7 @@
     state.line = 0;
     const scene = GAME.scenes[index];
     state.solved = !scene.quiz;
-    state.snapshot = { stats: clone(state.stats), info: clone(state.info) };
+    state.snapshot = clone(state.info);
     save();
 
     el.chapter.textContent = scene.chapter || `SCENE ${index + 1}`;
@@ -340,7 +270,6 @@
 
     effect(line.effect);
     applyInfo(line.info);
-    applyStats(line.stats);
 
     const last = state.line >= lines.length - 1;
     typeText(fmt(line.text), () => {
@@ -357,7 +286,7 @@
   }
 
   function advance() {
-    if (state.over || !$("game-screen").classList.contains("active")) return;
+    if (!$("game-screen").classList.contains("active")) return;
     if (!state.lineDone) { typeText.finish?.(); return; }
     const lines = GAME.scenes[state.scene].lines || [];
     if (state.line < lines.length - 1) { state.line++; showLine(); }
@@ -379,7 +308,10 @@
     el.hint.hidden = true; el.hint.textContent = fmt(quiz.hint);
     el.hintBtn.hidden = !quiz.hint;
     el.hintBtn.disabled = false;
-    el.hintBtn.textContent = "힌트 보기" + (rules.hintCost ? " (" + costText(rules.hintCost) + ")" : "");
+    el.hintBtn.textContent = "힌트 보기";
+    el.quizImage.hidden = !quiz.image;
+    if (quiz.image) el.quizImage.src = quiz.image;
+    el.input.inputMode = quiz.numeric ? "numeric" : "text";
     el.input.value = ""; el.input.disabled = false;
     el.choices.innerHTML = "";
 
@@ -397,10 +329,8 @@
     }
   }
 
-  const costText = (d) => Object.entries(d).map(([k, v]) => `${GAME.stats[k]?.label ?? k} ${v > 0 ? "+" : ""}${v}`).join(", ");
-
   function check(value, choiceBtn) {
-    if (state.solved || state.over) return;
+    if (state.solved) return;
     const quiz = GAME.scenes[state.scene].quiz;
     const answers = [].concat(quiz.answer).map(normalize);
 
@@ -416,8 +346,6 @@
       el.input.disabled = true;
       el.hintBtn.hidden = true;
       addLog(`${quiz.title || "퀴즈"} 통과`);
-      const reward = quiz.reward || rules.correctReward;
-      if (reward) applyStats(reward, "검사 통과");
     } else {
       state.wrong++;
       el.feedback.textContent = "▶ 오류. 응답이 일치하지 않습니다.";
@@ -426,7 +354,7 @@
       if (choiceBtn) choiceBtn.disabled = true;
       sound.sfx("wrong");
       el.quizBox.classList.remove("shake"); void el.quizBox.offsetWidth; el.quizBox.classList.add("shake");
-      applyStats(quiz.penalty || rules.wrongPenalty, "오답");
+      addLog(`${quiz.title || "퀴즈"} 실패`, true);
     }
     updateGate();
   }
@@ -438,7 +366,6 @@
   el.hintBtn.addEventListener("click", () => {
     el.hint.hidden = false;
     el.hintBtn.disabled = true;
-    applyStats(rules.hintCost, "힌트");
   });
 
   // 퀴즈를 풀고(그리고 필수 영상을 다 본 뒤)에만 다음 장면 버튼이 열림
@@ -452,7 +379,7 @@
   }
 
   el.nextSceneBtn.addEventListener("click", () => {
-    if (!state.solved || !state.videoDone || state.over) return;   // 이중 잠금
+    if (!state.solved || !state.videoDone) return;   // 이중 잠금
     if (state.scene + 1 < GAME.scenes.length) {
       startScene(state.scene + 1);
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -467,21 +394,17 @@
     const sec = Math.round((Date.now() - state.startedAt) / 1000);
     el.endTitle.textContent = GAME.title;
     el.endText.textContent = fmt(GAME.ending);
-    const statsText = Object.entries(GAME.stats).map(([k, d]) => `${d.label} ${state.stats[k]}`).join(" · ");
-    el.endStats.textContent = `피험자 ${state.name} — 경과 ${Math.floor(sec / 60)}분 ${sec % 60}초 · 오답 ${state.wrong}회 · ${statsText}`;
+    el.endStats.textContent = `피험자 ${state.name} — 경과 ${Math.floor(sec / 60)}분 ${sec % 60}초 · 오답 ${state.wrong}회`;
     show("end-screen");
   }
 
   function begin(saved) {
     sound.init();
-    state.over = false;
-    el.gameover.hidden = true;
     if (saved) {
-      Object.assign(state, { name: saved.name, wrong: saved.wrong, startedAt: saved.startedAt, stats: saved.stats, info: saved.info, log: saved.log || [] });
+      Object.assign(state, { name: saved.name, wrong: saved.wrong, startedAt: saved.startedAt, info: saved.info, log: saved.log || [] });
     } else {
-      Object.assign(state, { wrong: 0, startedAt: Date.now(), stats: initialStats(), info: clone(GAME.info), log: [] });
+      Object.assign(state, { wrong: 0, startedAt: Date.now(), info: clone(GAME.info), log: [] });
     }
-    renderStatus.prev = null;
     renderLog();
     show("game-screen");
     startScene(saved ? Math.min(saved.scene, GAME.scenes.length - 1) : 0);

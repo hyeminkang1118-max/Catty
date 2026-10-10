@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 540">
+  <defs>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1c2628"/><stop offset="1" stop-color="#0b1012"/></linearGradient>
+    <linearGradient id="stain" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5a1a1e" stop-opacity="0"/><stop offset="1" stop-color="#5a1a1e" stop-opacity=".35"/></linearGradient>
+  </defs>
+  <rect x="10" y="10" width="840" height="520" rx="34" fill="url(#card)" stroke="#3a5a5c" stroke-width="3"/>
+  <rect x="10" y="10" width="840" height="86" rx="34" fill="#7fd6be" fill-opacity=".12"/>
+  <text x="50" y="66" fill="#7fd6be" font-family="monospace" font-size="30" font-weight="bold" letter-spacing="4">PERFECT HUMAN LAB</text>
+  <text x="810" y="66" fill="#7fd6be" fill-opacity=".6" font-family="monospace" font-size="20" text-anchor="end">ACCESS CARD</text>
+  <rect x="50" y="130" width="170" height="210" fill="#0a0e0f" stroke="#2c4244" stroke-width="2"/>
+  <circle cx="135" cy="210" r="42" fill="#2a3436"/>
+  <path d="M65 340 Q65 270 135 262 Q205 270 205 340 Z" fill="#2a3436"/>
+  <text x="260" y="170" fill="#6a7577" font-family="sans-serif" font-size="22">소속 · 냉동인간 연구부</text>
+  <text x="260" y="226" fill="#e8eeee" font-family="sans-serif" font-size="44" font-weight="bold">연구원 루나</text>
+  <text x="260" y="270" fill="#6a7577" font-family="monospace" font-size="22">RESEARCHER · LV.3</text>
+  <rect x="50" y="380" width="760" height="110" fill="#050808" stroke="#7fd6be" stroke-opacity=".4" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="80" y="420" fill="#6a7577" font-family="monospace" font-size="20">SERIAL No.</text>
+  <text x="430" y="468" fill="#7fd6be" font-family="monospace" font-size="46" text-anchor="middle" letter-spacing="3">LUNA = 12211401</text>
+  <rect x="560" y="10" width="290" height="520" rx="34" fill="url(#stain)"/>
+  <path d="M700 300 l40 -20 l-10 40 l30 10" stroke="#c9b9a8" stroke-opacity=".25" stroke-width="2" fill="none"/>
+</svg>
