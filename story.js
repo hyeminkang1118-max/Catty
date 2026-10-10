@@ -91,18 +91,7 @@ const GAME = {
         { speaker: "연구원", text: "아이러니하게도 그런 상황에서 안전했던 건 몸을 캡슐 속에 얼려놓은 우리 '퍼펙트 휴먼'들 뿐이에요." },
         { speaker: "연구원", text: "그리고 우리는 이제 이 망가진 지구에서 인류의 명맥을 이어야 하죠.", effect: "flash" },
         { system: "[SYSTEM] 칭호 획득: 「인류의 마지막 표본」", info: { 칭호: "인류의 마지막 표본" } },
-        "믿을 수 없었다. 현재 상황을 내 눈으로 직접 확인해야 했다.",
-        { text: "하지만 밖으로 나가는 문은 굳게 잠겨 있었다. 문 옆에는 숫자 키패드가 달려 있다.", effect: "alarm" },
-        "책상 위에 루나가 두고 간 출입카드가 놓여 있다. 카드 뒷면에 이상한 일련번호가 적혀 있다.",
       ],
-      quiz: {
-        title: "출입문 잠금장치",
-        image: "assets/images/luna-card.svg",
-        question: "출입카드에 적힌 규칙을 보고, 출입문 비밀번호를 입력하십시오.\nLUNA = 12211401\nHUMAN = ?",
-        answer: ["0821130114"],
-        numeric: true,
-        hint: "L은 알파벳의 12번째 글자입니다.",
-      },
     },
     // ───────────────────────── 3장 · 바깥 세상 ─────────────────────────
     {
@@ -171,8 +160,62 @@ const GAME = {
       quiz: {
         title: "우주선 목적지",
         question: "우주선의 최종 목적지를 입력하세요.\nFrom: Earth → To: ____",
-        answer: ["Mars", "화성"],
+        answer: ["Mars"],
       },
+    },
+    // ───────────────────────── 6장 · 마지막 시간 ─────────────────────────
+    {
+      chapter: "CHAPTER 6 · 마지막 시간",
+      info: { 위치: "연구소" },
+      media: { type: "image", src: "assets/images/scene6.svg" },
+      lines: [
+        { speaker: "{name}", text: "그래요. 그럼 마지막으로 시간을 줘요." },
+        "나는 루나에게 혼자 있고 싶다고 말했다.",
+        { speaker: "루나", text: "알았어요. 그러면 3시간 내로 꼭 돌아와야 해요." },
+        "나는 그 얘기를 듣고 밖에 나갔다. 우리 가족들을 보고 싶었다.",
+        "그런데 연구소 밖을 어떻게 나가지?",
+      ],
+      quiz: {
+        title: "출입문 잠금장치",
+        image: "assets/images/luna-card.svg",
+        question: "출입카드에 적힌 규칙을 보고, 출입문 비밀번호를 입력하십시오.\nLUNA = 12211401\nHUMAN = ?",
+        answer: ["0821130114"],
+        numeric: true,
+        hint: "L은 알파벳의 12번째 글자입니다.",
+      },
+    },
+
+    // ───────────────────────── 7장 · 낯선 남자 ─────────────────────────
+    {
+      chapter: "CHAPTER 7 · 낯선 남자",
+      info: { 위치: "연구소 밖" },
+      media: { type: "image", src: "assets/images/scene4.svg" },
+      lines: [
+        "연구소 밖을 탈출하는 데 성공했다.",
+        "나는 정신을 잃을 것처럼 어디론가 내달리기 시작했다.",
+        { text: "그러다 어떤 모자 쓴 남성과 부딪혔다.", effect: "shake" },
+        "나는 그 남성의 얼굴을 보고 깜짝 놀랐다. 나처럼 30년 전 인간의 모습을 그대로 유지한 사람이었다.",
+        "그런데 왜… 이곳에….",
+        "남성은 나를 보고 당황하더니 급하게 자리를 떴다.",
+        "저기… 나는 남성에게 말을 걸려다가 남성이 두고 간 핸드폰을 주웠다.",
+      ],
+      quiz: {
+        title: "핸드폰 잠금 패턴",
+        image: "assets/images/phone-pattern.svg",
+        question: "핸드폰 잠금 패턴을 입력하세요.",
+        answer: ["1258"],
+        numeric: true,
+      },
+    },
+
+    // ───────────────────────── 7장 · 메시지 ─────────────────────────
+    {
+      chapter: "CHAPTER 7 · 낯선 남자",
+      media: { type: "image", src: "assets/images/phone-message.svg" },
+      lines: [
+        "열자마자 써 있는 것은…",
+        { system: "루나를 믿지 마라\n(don't trust LUNA)", effect: "glitch" },
+      ],
     },
   ],
 };

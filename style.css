@@ -160,7 +160,7 @@ input:focus { border-color: var(--sys); box-shadow: 0 0 0 2px var(--sys-dim); }
 .quiz-title { color: var(--warn); letter-spacing: .1em; font-weight: 700; }
 .quiz-box.solved .quiz-title { color: var(--sys); }
 .lock { animation: blink 1.2s infinite; }
-.quiz-image { display: block; width: min(460px, 100%); margin: 14px auto 4px; border: 1px solid var(--line); }
+.quiz-image { display: block; width: auto; max-width: min(460px, 100%); max-height: 440px; margin: 14px auto 4px; border: 1px solid var(--line); }
 #quiz-question { white-space: pre-line; font-family: var(--serif); font-size: 1.05rem; }
 .choices { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px; margin-bottom: 8px; word-break: keep-all; }
 .choice.correct { border-color: var(--sys); color: var(--sys); background: var(--sys-dim); opacity: 1; }

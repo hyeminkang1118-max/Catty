@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#040606"/>
+  <rect x="590" y="40" width="420" height="820" rx="56" fill="#0a0d0e" stroke="#2c3a3c" stroke-width="6"/>
+  <rect x="610" y="96" width="380" height="708" rx="18" fill="#0f1416"/>
+  <rect x="750" y="58" width="100" height="12" rx="6" fill="#1d2628"/>
+  <text x="800" y="420" fill="#e0303c" font-family="sans-serif" font-size="46" font-weight="bold" text-anchor="middle">루나를 믿지 마라</text>
+  <text x="800" y="480" fill="#c6cdcf" fill-opacity=".7" font-family="monospace" font-size="28" text-anchor="middle">don't trust LUNA</text>
+  <text x="30" y="880" fill="#ffffff" opacity=".25" font-family="sans-serif" font-size="22">임시 이미지 — assets/images/phone-message.svg</text>
+</svg>
