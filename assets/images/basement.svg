@@ -10,5 +10,4 @@
 <path d="M380 620 Q420 560 470 640 Q520 700 480 620" stroke="#4a3a2a" stroke-width="6" fill="none"/>
 <rect x="1180" y="250" width="200" height="140" fill="#2a2418" stroke="#4a3a20" stroke-width="8" transform="rotate(6 1280 320)"/>
 <g fill="#050505"><ellipse cx="560" cy="420" rx="70" ry="14"/><path d="M520 420 Q560 380 600 420 Z"/><path d="M510 430 L490 640 L630 640 L610 430 Z"/></g>
-<text x="30" y="880" fill="#fff" opacity=".22" font-family="'Nanum Gothic', 'Apple SD Gothic Neo', sans-serif" font-size="22">임시 이미지 — assets/images/basement.svg</text>
 </svg>

@@ -13,5 +13,4 @@
 <text x="800" y="586" fill="#c8b890" font-family="'Nanum Gothic', 'Apple SD Gothic Neo', sans-serif" font-size="28" font-weight="bold" text-anchor="middle" letter-spacing="12">아라랏</text>
 <path d="M730 760 L730 660 Q800 600 870 660 L870 760 Z" fill="#14120e"/>
 <rect x="782" y="690" width="36" height="22" fill="#3a4a40" stroke="#7fd6be" stroke-opacity=".5"/>
-<text x="30" y="880" fill="#fff" opacity=".22" font-family="'Nanum Gothic', 'Apple SD Gothic Neo', sans-serif" font-size="22">임시 이미지 — assets/images/church.svg</text>
 </svg>

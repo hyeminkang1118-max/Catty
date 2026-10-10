@@ -7,5 +7,4 @@
 <rect x="140" y="140" width="580" height="620" rx="180" fill="#0b1520" opacity=".35"/>
 <g fill="#06080a"><ellipse cx="380" cy="640" rx="44" ry="52"/><path d="M320 800 Q320 700 380 690 Q440 700 440 800 Z"/>
 <ellipse cx="500" cy="660" rx="40" ry="46"/><path d="M450 800 Q450 715 500 706 Q552 715 552 800 Z"/></g>
-<text x="30" y="880" fill="#fff" opacity=".22" font-family="'Nanum Gothic', 'Apple SD Gothic Neo', sans-serif" font-size="22">임시 이미지 — assets/images/ending-normal.svg</text>
 </svg>

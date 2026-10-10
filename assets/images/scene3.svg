@@ -15,5 +15,4 @@
   <line x1="800" y1="90" x2="800" y2="710" stroke="#1d1a19" stroke-width="24"/>
   <path d="M820 140 L900 230 L870 260 L960 360" stroke="#c9b9a8" stroke-opacity=".35" stroke-width="2" fill="none"/>
   <text x="800" y="800" fill="#d8a060" opacity=".6" font-family="monospace" font-size="26" text-anchor="middle">외부 대기 — 생존 불가 · AQI ███</text>
-  <text x="30" y="880" fill="#ffffff" opacity=".25" font-family="sans-serif" font-size="22">임시 이미지 — assets/images/scene3.svg</text>
 </svg>

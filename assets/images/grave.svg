@@ -13,5 +13,4 @@
 <rect x="700" y="700" width="200" height="70" fill="#4a4e47"/>
 <g stroke="#2a2e28" stroke-width="2" fill="none"><rect x="716" y="712" width="36" height="46"/><rect x="760" y="712" width="36" height="46"/><rect x="804" y="712" width="36" height="46"/><rect x="848" y="712" width="36" height="46"/></g>
 <rect x="930" y="730" width="70" height="40" fill="#c8c8c0" opacity=".35" transform="rotate(8 965 750)"/>
-<text x="30" y="880" fill="#fff" opacity=".22" font-family="'Nanum Gothic', 'Apple SD Gothic Neo', sans-serif" font-size="22">임시 이미지 — assets/images/grave.svg</text>
 </svg>

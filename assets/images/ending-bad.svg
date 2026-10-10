@@ -7,5 +7,4 @@
 <rect x="690" y="700" width="220" height="60" fill="#e0303c"/>
 <text x="800" y="742" fill="#0a0203" font-family="'Nanum Gothic Coding', monospace" font-size="38" font-weight="bold" text-anchor="middle" letter-spacing="8">SEED</text>
 <text x="800" y="60" fill="#e0303c" font-family="'Nanum Gothic Coding', monospace" font-size="24" text-anchor="middle" opacity=".7">CARGO B-7 · RE-FREEZE</text>
-<text x="30" y="880" fill="#fff" opacity=".22" font-family="'Nanum Gothic', 'Apple SD Gothic Neo', sans-serif" font-size="22">임시 이미지 — assets/images/ending-bad.svg</text>
 </svg>

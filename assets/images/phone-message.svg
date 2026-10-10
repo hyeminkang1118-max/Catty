@@ -7,5 +7,4 @@
 <line x1="630" y1="170" x2="970" y2="170" stroke="#1d2628" stroke-width="2"/>
 <text x="800" y="420" fill="#e0303c" font-family="'Nanum Gothic', 'Apple SD Gothic Neo', sans-serif" font-size="46" font-weight="bold" text-anchor="middle">루나를 믿지 마라</text>
 <text x="800" y="480" fill="#c6cdcf" fill-opacity=".7" font-family="'Nanum Gothic Coding', monospace" font-size="28" text-anchor="middle">Don't trust LUNA</text>
-<text x="30" y="880" fill="#fff" opacity=".22" font-family="'Nanum Gothic', 'Apple SD Gothic Neo', sans-serif" font-size="22">임시 이미지 — assets/images/phone-message.svg</text>
 </svg>

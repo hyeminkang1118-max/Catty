@@ -10,5 +10,4 @@
 <ellipse cx="800" cy="770" rx="320" ry="26" fill="#d8c8a0" opacity=".25"/>
 <rect x="0" y="0" width="1600" height="900" fill="none" stroke="#e8e8e0" stroke-width="24" opacity=".85"/>
 <text x="1560" y="870" fill="#d9d9d0" font-family="'Nanum Gothic Coding', monospace" font-size="22" text-anchor="end">IMG_2059_1103.jpg</text>
-<text x="30" y="880" fill="#fff" opacity=".22" font-family="'Nanum Gothic', 'Apple SD Gothic Neo', sans-serif" font-size="22">임시 이미지 — assets/images/ark-ship.svg</text>
 </svg>
