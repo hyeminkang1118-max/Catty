@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900"><defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a1c18"/><stop offset="1" stop-color="#3a3424"/></linearGradient></defs>
+<rect width="1600" height="900" fill="url(#sky)"/>
+<path d="M560 900 L560 520 Q560 440 800 440 Q1040 440 1040 520 L1040 900 Z" fill="#5a5f58"/>
+<path d="M560 900 L560 520 Q560 440 800 440 L800 900 Z" fill="#666b64"/>
+<g transform="translate(640 120) scale(1.6)">
+  <path d="M40 220 Q60 120 150 110 L200 80 L196 120 Q230 150 210 200 Q180 250 110 240 L60 280 L70 230 Z" fill="#070707"/>
+  <path d="M200 80 L240 92 L198 104 Z" fill="#1c1c1c"/>
+  <circle cx="186" cy="100" r="6" fill="#e8f0f0"/><circle cx="187" cy="100" r="2.5" fill="#000"/>
+  <path d="M90 170 Q140 130 190 170" stroke="#3a4a5a" stroke-width="5" fill="none" opacity=".8"/>
+  <path d="M120 236 L116 270 M150 238 L154 272" stroke="#111" stroke-width="5"/>
+</g>
+<text x="30" y="880" fill="#fff" opacity=".22" font-family="'Nanum Gothic', 'Apple SD Gothic Neo', sans-serif" font-size="22">임시 이미지 — assets/images/crow.svg</text>
+</svg>

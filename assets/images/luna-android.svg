@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900"><defs><radialGradient id="back" cx="50%" cy="45%" r="60%"><stop offset="0" stop-color="#1a3040" stop-opacity=".8"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient></defs>
+<rect width="1600" height="900" fill="#060708"/>
+<rect x="0" y="0" width="1600" height="900" fill="url(#back)"/>
+<path d="M560 900 Q560 640 800 600 Q1040 640 1040 900 Z" fill="#d8dcdc"/>
+<path d="M760 610 L800 700 L840 610" fill="#b8bcbc"/>
+<ellipse cx="800" cy="400" rx="150" ry="190" fill="#c8c0b4"/>
+<path d="M650 380 Q640 200 800 200 Q960 200 950 380 Q930 260 800 250 Q670 260 650 380 Z" fill="#1a1614"/>
+<path d="M800 590 L800 210" stroke="#7a7268" stroke-width="2" opacity=".5"/>
+<path d="M650 420 Q700 430 720 470 L700 520" stroke="#5fb8ff" stroke-width="2" fill="none" opacity=".6"/>
+<g fill="#5fb8ff"><ellipse cx="740" cy="400" rx="30" ry="16"/><ellipse cx="860" cy="400" rx="30" ry="16"/></g>
+<g fill="#e8f6ff"><circle cx="740" cy="400" r="6"/><circle cx="860" cy="400" r="6"/></g>
+<g fill="#5fb8ff" opacity=".7" font-family="'Nanum Gothic Coding', monospace" font-size="14">
+  <text x="700" y="440">LINEAGE</text><text x="826" y="440">UNIT</text>
+  <text x="694" y="460">FOR NOAH'S</text><text x="836" y="460">ARK</text>
+</g>
+<path d="M760 510 Q800 530 840 510" stroke="#7a4a40" stroke-width="5" fill="none"/>
+<text x="30" y="880" fill="#fff" opacity=".22" font-family="'Nanum Gothic', 'Apple SD Gothic Neo', sans-serif" font-size="22">임시 이미지 — assets/images/luna-android.svg</text>
+</svg>

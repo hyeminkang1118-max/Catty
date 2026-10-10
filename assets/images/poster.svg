@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900"><defs><radialGradient id="v" cx="50%" cy="45%" r="70%"><stop offset="0" stop-color="#1b2626" stop-opacity="0"/><stop offset="1" stop-color="#000"/></radialGradient><linearGradient id="age" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5a4a2a" stop-opacity=".1"/><stop offset="1" stop-color="#3a2a12" stop-opacity=".45"/></linearGradient></defs>
+<rect width="1600" height="900" fill="#0a0d0d"/>
+<rect x="0" y="0" width="1600" height="900" fill="url(#v)"/>
+<rect x="520" y="70" width="560" height="760" fill="#cfc6ae" opacity=".86"/>
+<rect x="520" y="70" width="560" height="760" fill="url(#age)"/>
+<ellipse cx="800" cy="390" rx="170" ry="210" fill="#2c4a52" opacity=".75"/>
+<rect x="690" y="230" width="220" height="330" rx="110" fill="none" stroke="#e8f2f0" stroke-width="6" opacity=".7"/>
+<circle cx="800" cy="330" r="40" fill="#e8f2f0" opacity=".45"/>
+<path d="M740 470 Q800 420 860 470 L850 540 L750 540 Z" fill="#e8f2f0" opacity=".45"/>
+<text x="800" y="660" fill="#16262a" font-family="'Nanum Gothic Coding', monospace" font-size="44" font-weight="bold" text-anchor="middle" letter-spacing="3">PERFECT HUMAN</text>
+<text x="800" y="706" fill="#16262a" font-family="'Nanum Gothic Coding', monospace" font-size="30" text-anchor="middle" letter-spacing="10">PROJECT</text>
+<text x="800" y="770" fill="#3b4a4c" font-family="'Nanum Myeongjo', serif" font-size="28" text-anchor="middle">인류의 내일을 얼려 두다</text>
+<text x="800" y="806" fill="#3b4a4c" font-family="'Nanum Gothic Coding', monospace" font-size="18" text-anchor="middle">ARK CORP. · 2029</text>
+<path d="M1040 70 L1080 70 L1080 140 Z" fill="#0a0d0d" opacity=".7"/>
+<path d="M520 760 L520 830 L600 830 Z" fill="#0a0d0d" opacity=".6"/>
+<text x="30" y="880" fill="#fff" opacity=".22" font-family="'Nanum Gothic', 'Apple SD Gothic Neo', sans-serif" font-size="22">임시 이미지 — assets/images/poster.svg</text>
+</svg>

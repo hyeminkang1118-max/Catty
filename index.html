@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PERFECT HUMAN</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&family=Nanum+Myeongjo:wght@400;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&family=Nanum+Myeongjo:wght@400;700&family=Nanum+Pen+Script&display=swap" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -45,7 +45,13 @@
               <div class="pid" id="status-id"></div>
             </div>
           </div>
+          <div class="countdown" id="countdown" hidden>
+            <span>방주호 출발까지</span>
+            <b id="countdown-time">03:00:00</b>
+          </div>
           <dl class="info" id="status-info"></dl>
+          <div class="inv-title" id="inv-title" hidden>소지품</div>
+          <ul class="inventory" id="inventory"></ul>
           <div class="log-title">SYSTEM LOG</div>
           <ul class="log" id="status-log"></ul>
         </aside>
@@ -62,8 +68,26 @@
           <!-- 퀴즈 -->
           <div id="quiz-box" class="quiz-box" hidden>
             <div class="quiz-title"><span class="lock">■</span> <span id="quiz-title"></span></div>
-            <img id="quiz-image" class="quiz-image" alt="단서" hidden />
+            <div id="quiz-images" class="quiz-images"></div>
             <p id="quiz-question"></p>
+            <div id="quiz-tool" class="caesar" hidden>
+              <div class="caesar-head">
+                <span>알파벳 원판</span>
+                <button type="button" class="btn small" id="caesar-minus" aria-label="한 칸 왼쪽으로">◀</button>
+                <b id="caesar-shift">0</b>
+                <button type="button" class="btn small" id="caesar-plus" aria-label="한 칸 오른쪽으로">▶</button>
+              </div>
+              <div class="caesar-rows"><div id="caesar-top" class="caesar-row"></div><div id="caesar-bottom" class="caesar-row shifted"></div></div>
+            </div>
+            <div id="quiz-order" class="order" hidden>
+              <div id="order-slots" class="order-slots"></div>
+              <div id="order-pieces" class="order-pieces"></div>
+              <button type="button" class="btn primary" id="order-check">확인</button>
+            </div>
+            <form id="quiz-fields" class="fields" autocomplete="off" hidden>
+              <div id="fields-list" class="fields-list"></div>
+              <button class="btn primary" type="submit">확인</button>
+            </form>
             <div id="quiz-choices" class="choices"></div>
             <form id="quiz-form" autocomplete="off">
               <input id="quiz-input" type="text" placeholder="> 답 입력" />
@@ -71,7 +95,7 @@
             </form>
             <p id="quiz-feedback" aria-live="polite"></p>
             <button id="hint-btn" class="btn small" type="button"></button>
-            <p id="quiz-hint" hidden></p>
+            <ol id="quiz-hints" class="hints"></ol>
           </div>
 
           <button id="next-scene-btn" class="btn primary next-scene" hidden disabled></button>
@@ -81,11 +105,22 @@
 
     <!-- 엔딩 화면 -->
     <section id="end-screen" class="screen">
+      <p class="end-code" id="end-code"></p>
       <h1 class="glitch" id="end-title"></h1>
       <p id="end-text" class="subtitle"></p>
       <p id="end-stats" class="note"></p>
       <button id="restart-btn" class="btn primary">처음부터 다시</button>
     </section>
+  </div>
+
+  <!-- 소지품 보기 -->
+  <div id="viewer" class="overlay" hidden>
+    <div class="viewer-box" role="dialog" aria-modal="true" aria-labelledby="viewer-title">
+      <h3 id="viewer-title"></h3>
+      <div id="viewer-images" class="viewer-images"></div>
+      <p id="viewer-text"></p>
+      <button id="viewer-close" class="btn primary" type="button">닫기</button>
+    </div>
   </div>
 
   <div class="fx-scanlines" aria-hidden="true"></div>

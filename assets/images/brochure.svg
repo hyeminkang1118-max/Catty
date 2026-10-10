@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900"><defs></defs>
+<rect width="1600" height="900" fill="#0c0f10"/>
+<rect x="160" y="70" width="1280" height="760" fill="#eef1ef"/>
+<rect x="160" y="70" width="1280" height="120" fill="#16313a"/>
+<text x="210" y="148" fill="#eef1ef" font-family="'Nanum Gothic Coding', monospace" font-size="44" font-weight="bold" letter-spacing="6">ARK CORP.</text>
+<text x="1390" y="148" fill="#9fd8cc" font-family="'Nanum Gothic', 'Apple SD Gothic Neo', sans-serif" font-size="26" text-anchor="end">인류를 구할 완벽한 배</text>
+<path d="M260 520 L1120 520 Q1180 520 1200 470 L240 470 Z" fill="#16313a" opacity=".9"/>
+<rect x="320" y="400" width="760" height="70" fill="#2b5562"/>
+<g stroke="#e0303c" stroke-width="4" fill="#e0303c">
+  <line x1="240" y1="570" x2="1200" y2="570"/><polygon points="240,570 262,560 262,580"/><polygon points="1200,570 1178,560 1178,580"/>
+  <line x1="1260" y1="400" x2="1260" y2="520"/><polygon points="1260,400 1250,422 1270,422"/><polygon points="1260,520 1250,498 1270,498"/>
+</g>
+<text x="720" y="615" fill="#e0303c" font-family="'Nanum Gothic', 'Apple SD Gothic Neo', sans-serif" font-size="30" text-anchor="middle">① 길이</text>
+<text x="1300" y="470" fill="#e0303c" font-family="'Nanum Gothic', 'Apple SD Gothic Neo', sans-serif" font-size="30">③ 높이</text>
+<g stroke="#e0303c" stroke-width="4"><line x1="1210" y1="360" x2="1290" y2="320"/></g>
+<text x="1300" y="320" fill="#e0303c" font-family="'Nanum Gothic', 'Apple SD Gothic Neo', sans-serif" font-size="30">② 너비</text>
+<text x="800" y="700" fill="#16313a" font-family="'Nanum Gothic', 'Apple SD Gothic Neo', sans-serif" font-size="36" font-weight="bold" text-anchor="middle">방주호는 고대 방주의 비율 그대로 설계되었습니다.</text>
+<text x="800" y="760" fill="#16313a" font-family="'Nanum Gothic Coding', monospace" font-size="34" text-anchor="middle" letter-spacing="2">길이 → 너비 → 높이</text>
+<text x="30" y="880" fill="#fff" opacity=".22" font-family="'Nanum Gothic', 'Apple SD Gothic Neo', sans-serif" font-size="22">임시 이미지 — assets/images/brochure.svg</text>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900"><defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0c0f0c"/><stop offset="1" stop-color="#2a2e1c"/></linearGradient></defs>
+<rect width="1600" height="900" fill="url(#sky)"/>
+<g fill="#0e120d"><rect x="40" y="200" width="220" height="460"/><rect x="1300" y="160" width="260" height="500"/><rect x="280" y="300" width="140" height="360"/></g>
+<path d="M0 360 L640 380 L700 470 L760 400 L1600 420 L1600 470 L780 450 L720 520 L660 430 L0 410 Z" fill="#1b211a"/>
+<g fill="#161b15"><rect x="420" y="410" width="26" height="250"/><rect x="1040" y="440" width="26" height="220"/></g>
+<path d="M690 470 L740 660 L700 660 Z" fill="#141912"/>
+<rect y="640" width="1600" height="260" fill="#151a10"/>
+<g stroke="#4a5530" stroke-opacity=".35" stroke-width="2"><line x1="0" y1="680" x2="1600" y2="680"/><line x1="200" y1="740" x2="900" y2="740"/></g>
+<g fill="#050604">
+  <ellipse cx="1110" cy="430" rx="62" ry="12"/>
+  <path d="M1085 430 Q1110 400 1135 430 Z"/>
+  <path d="M1080 438 L1060 600 L1085 600 L1105 520 L1115 600 L1140 600 L1135 438 Z"/>
+  <path d="M1135 450 L1170 520 L1158 525 L1128 470 Z"/>
+</g>
+<g fill="#7fd6be" opacity=".8"><rect x="640" y="690" width="34" height="58" rx="5" transform="rotate(-18 657 719)"/></g>
+<rect x="647" y="697" width="20" height="40" fill="#0b1012" transform="rotate(-18 657 719)"/>
+<text x="30" y="880" fill="#fff" opacity=".22" font-family="'Nanum Gothic', 'Apple SD Gothic Neo', sans-serif" font-size="22">임시 이미지 — assets/images/street.svg</text>
+</svg>

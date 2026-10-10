@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560"><defs></defs>
+<rect width="1000" height="560" fill="#0d0c0a"/>
+<g transform="rotate(-3 500 280)">
+<rect x="90" y="70" width="820" height="420" fill="#4a3418"/>
+<rect x="120" y="100" width="760" height="360" fill="#d6c9a6"/>
+<text x="500" y="170" fill="#5a4a2e" font-family="'Nanum Myeongjo', serif" font-size="28" text-anchor="middle">창세기 7장 4절</text>
+<text x="500" y="260" fill="#1e170c" font-family="'Nanum Myeongjo', serif" font-size="40" text-anchor="middle">이제 칠 일이 지나면</text>
+<text x="500" y="320" fill="#1e170c" font-family="'Nanum Myeongjo', serif" font-size="40" text-anchor="middle">내가 사십 주야를</text>
+<text x="500" y="380" fill="#1e170c" font-family="'Nanum Myeongjo', serif" font-size="40" text-anchor="middle">땅에 비를 내려</text>
+</g>
+</svg>

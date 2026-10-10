@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560"><defs></defs>
+<rect width="900" height="560" fill="#0b0d0e"/>
+<path d="M150 0 Q220 120 290 150" stroke="#9aa0a4" stroke-width="5" fill="none" stroke-dasharray="10 6"/>
+<path d="M750 0 Q680 120 610 150" stroke="#9aa0a4" stroke-width="5" fill="none" stroke-dasharray="10 6"/>
+<circle cx="300" cy="320" r="150" fill="#8a9094" stroke="#c8ccd0" stroke-width="8"/>
+<circle cx="300" cy="320" r="118" fill="#6e7478"/>
+<path d="M240 300 Q300 240 360 300 Q300 400 240 300 Z" fill="#9aa0a4"/>
+<circle cx="600" cy="320" r="150" fill="#8a9094" stroke="#c8ccd0" stroke-width="8"/>
+<circle cx="600" cy="320" r="122" fill="#c8ccd0"/>
+<rect x="440" y="306" width="20" height="28" fill="#c8ccd0"/>
+<text x="600" y="262" fill="#2a2e30" font-family="'Nanum Myeongjo', serif" font-size="22" text-anchor="middle">모든 종류를 태우라.</text>
+<text x="600" y="306" fill="#2a2e30" font-family="'Nanum Myeongjo', serif" font-size="22" text-anchor="middle">정결한 것은</text>
+<text x="600" y="338" fill="#2a2e30" font-family="'Nanum Myeongjo', serif" font-size="22" text-anchor="middle">일곱 쌍,</text>
+<text x="600" y="382" fill="#2a2e30" font-family="'Nanum Myeongjo', serif" font-size="22" text-anchor="middle">부정한 것도 한 쌍.</text>
+<text x="600" y="420" fill="#5a5e60" font-family="'Nanum Gothic Coding', monospace" font-size="14" text-anchor="middle">— K.</text>
+</svg>

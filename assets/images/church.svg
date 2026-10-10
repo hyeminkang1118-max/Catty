@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900"><defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#121410"/><stop offset="1" stop-color="#36301f"/></linearGradient></defs>
+<rect width="1600" height="900" fill="url(#sky)"/>
+<path d="M0 760 Q800 640 1600 760 L1600 900 L0 900 Z" fill="#1a1f15"/>
+<path d="M480 760 L480 420 L800 220 L1120 420 L1120 760 Z" fill="#2a2a26"/>
+<path d="M1120 420 L1040 470 L1080 560 L1000 620 L1120 680 Z" fill="#1a1c18"/>
+<rect x="740" y="80" width="120" height="200" fill="#2e2e2a"/>
+<path d="M730 90 L800 20 L870 90 Z" fill="#26261f"/>
+<g transform="translate(790 26)"><path d="M0 10 Q10 -8 30 -2 L42 -10 L38 4 Q44 14 34 22 L8 22 Z" fill="#050505"/></g>
+<circle cx="800" cy="440" r="80" fill="#121410" stroke="#3a3a30" stroke-width="10"/>
+<path d="M800 440 L800 370 A70 70 0 0 1 855 396 Z" fill="#3a8a4a" opacity=".7"/><path d="M800 440 L855 396 A70 70 0 0 1 868 456 Z" fill="#b8303a" opacity=".7"/><path d="M800 440 L868 456 A70 70 0 0 1 830 503 Z" fill="#7a4ab0" opacity=".7"/><path d="M800 440 L830 503 A70 70 0 0 1 770 503 Z" fill="#d8c040" opacity=".7"/><path d="M800 440 L770 503 A70 70 0 0 1 732 456 Z" fill="#2a2a80" opacity=".7"/><path d="M800 440 L732 456 A70 70 0 0 1 745 396 Z" fill="#d8782a" opacity=".7"/><path d="M800 440 L745 396 A70 70 0 0 1 800 370 Z" fill="#3a6ad0" opacity=".7"/>
+<path d="M720 760 L720 600 Q800 530 880 600 L880 760 Z" fill="#14120e"/>
+<rect x="780" y="660" width="40" height="26" fill="#3a4a40" stroke="#7fd6be" stroke-opacity=".5"/>
+<rect x="620" y="330" width="360" height="56" fill="#1a1a16"/>
+<text x="800" y="370" fill="#c8b890" font-family="'Nanum Gothic', 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="bold" text-anchor="middle" letter-spacing="14">아라랏</text>
+<line x1="640" y1="358" x2="960" y2="345" stroke="#555" stroke-width="3" opacity=".5"/>
+<text x="30" y="880" fill="#fff" opacity=".22" font-family="'Nanum Gothic', 'Apple SD Gothic Neo', sans-serif" font-size="22">임시 이미지 — assets/images/church.svg</text>
+</svg>
