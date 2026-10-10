@@ -7,7 +7,7 @@
 <rect x="690" y="230" width="220" height="330" rx="110" fill="none" stroke="#e8f2f0" stroke-width="6" opacity=".7"/>
 <circle cx="800" cy="330" r="40" fill="#e8f2f0" opacity=".45"/>
 <path d="M740 470 Q800 420 860 470 L850 540 L750 540 Z" fill="#e8f2f0" opacity=".45"/>
-<text x="800" y="660" fill="#16262a" font-family="'Nanum Gothic Coding', monospace" font-size="44" font-weight="bold" text-anchor="middle" letter-spacing="3">PERFECT HUMAN</text>
+<text x="800" y="660" fill="#16262a" font-family="'Nanum Gothic Coding', monospace" font-size="44" font-weight="bold" text-anchor="middle" letter-spacing="3">PERFECT <tspan fill="#c8202c">HUMAN</tspan></text>
 <text x="800" y="706" fill="#16262a" font-family="'Nanum Gothic Coding', monospace" font-size="30" text-anchor="middle" letter-spacing="10">PROJECT</text>
 <text x="800" y="770" fill="#3b4a4c" font-family="'Nanum Myeongjo', serif" font-size="28" text-anchor="middle">인류의 내일을 얼려 두다</text>
 <text x="800" y="806" fill="#3b4a4c" font-family="'Nanum Gothic Coding', monospace" font-size="18" text-anchor="middle">ARK CORP. · 2029</text>

@@ -56,8 +56,8 @@ const GAME = {
   items: {
     card: {
       name: "루나의 출입증",
-      images: ["assets/images/luna-card.svg", "assets/images/luna-card-back.svg"],
-      text: "흰 가운 주머니에서 찾은 출입증. 뒷면에 포스트잇이 붙어 있다.",
+      images: ["assets/images/luna-card.svg"],
+      text: "흰 가운 주머니에서 찾은 출입증. 이름 LUNA, 사번 12-21-14-01.",
     },
     phone: {
       name: "모자 쓴 남자의 휴대폰",
@@ -218,13 +218,13 @@ const GAME = {
       ],
       quiz: {
         title: "Q1 · 루나의 출입증",
-        images: ["assets/images/luna-card.svg", "assets/images/luna-card-back.svg", "assets/images/poster.svg"],
+        images: ["assets/images/luna-card.svg", "assets/images/poster.svg"],
         question: "철문 키패드에 비밀번호를 입력하세요.",
         answer: ["0821130114"],
         numeric: true,
         hints: [
           "출입증 앞면의 사번과 이름을 비교해 보세요.",
-          "프로젝트 이름은 문 위 포스터에 있어요.",
+          "문 위 포스터에서 빨갛게 칠해진 단어를 찾아보세요.",
           "HUMAN의 각 글자를 알파벳 순서대로, 한 자리 수는 앞에 0을 붙여 두 자리로 적으세요.",
         ],
       },
