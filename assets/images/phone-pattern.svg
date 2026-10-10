@@ -22,9 +22,9 @@
     <circle cx="230" cy="420" r="13"/><circle cx="350" cy="420" r="13"/><circle cx="470" cy="420" r="13"/>
     <circle cx="230" cy="540" r="13"/><circle cx="350" cy="540" r="13"/><circle cx="470" cy="540" r="13"/>
   </g>
-  <g fill="#6a7577" font-family="monospace" font-size="20">
-    <text x="196" y="290">1</text><text x="316" y="290">2</text><text x="486" y="290">3</text>
-    <text x="196" y="410">4</text><text x="316" y="410">5</text><text x="486" y="410">6</text>
-    <text x="196" y="530">7</text><text x="316" y="530">8</text><text x="486" y="530">9</text>
-  </g>
+  <!-- 시작점 -->
+  <circle cx="230" cy="300" r="26" fill="none" stroke="#e0303c" stroke-width="3"/>
+  <rect x="150" y="214" width="96" height="34" rx="6" fill="#e0303c"/>
+  <text x="198" y="238" fill="#0a0d0e" font-family="monospace" font-size="20" font-weight="bold" text-anchor="middle">START</text>
+  <path d="M212 248 L224 276" stroke="#e0303c" stroke-width="3" stroke-linecap="round"/>
 </svg>
