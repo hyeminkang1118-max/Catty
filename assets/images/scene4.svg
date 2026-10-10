@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0e1210"/><stop offset="1" stop-color="#3a3a22"/></linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2c3420"/><stop offset="1" stop-color="#0a0d08"/></linearGradient>
+    <filter id="haze"><feGaussianBlur stdDeviation="3"/></filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <g fill="#141a13" filter="url(#haze)">
+    <rect x="80" y="260" width="160" height="340"/><rect x="300" y="180" width="120" height="420"/>
+    <path d="M520 600 L520 300 L600 250 L640 330 L640 600 Z"/><rect x="760" y="220" width="180" height="380"/>
+    <path d="M1020 600 L1020 340 L1100 300 L1100 600 Z"/><rect x="1180" y="240" width="140" height="360"/><rect x="1380" y="300" width="160" height="300"/>
+  </g>
+  <g fill="#0c100b" opacity=".9">
+    <rect x="320" y="220" width="20" height="26"/><rect x="370" y="290" width="20" height="26"/><rect x="800" y="270" width="24" height="30"/><rect x="870" y="360" width="24" height="30"/><rect x="1220" y="300" width="20" height="26"/>
+  </g>
+  <g stroke="#1f2a16" stroke-width="4" fill="none"><path d="M90 300 q20 -40 10 -80"/><path d="M780 230 q-30 -30 -20 -70"/><path d="M1390 320 q25 -30 5 -70"/></g>
+  <rect y="600" width="1600" height="300" fill="url(#water)"/>
+  <g stroke="#566040" stroke-opacity=".35" stroke-width="2"><line x1="0" y1="640" x2="1600" y2="640"/><line x1="100" y1="700" x2="700" y2="700"/><line x1="900" y1="760" x2="1500" y2="760"/></g>
+  <!-- 물 위를 떠다니는 형체들 -->
+  <g fill="#070906">
+    <path d="M300 690 q60 -50 150 -10 q30 10 50 -10 l-10 30 l10 30 q-20 -20 -50 -10 q-90 40 -150 -30 z"/>
+    <path d="M1050 740 q50 -40 120 -8 q25 8 40 -8 l-8 24 l8 24 q-16 -16 -40 -8 q-70 32 -120 -24 z"/>
+    <path d="M700 820 q40 -30 95 -6 q20 6 32 -6 l-6 18 l6 18 q-12 -12 -32 -6 q-55 24 -95 -18 z"/>
+  </g>
+  <g fill="#cfd8a0" opacity=".55"><circle cx="318" cy="686" r="4"/><circle cx="1066" cy="737" r="3"/><circle cx="714" cy="818" r="3"/></g>
+  <g fill="#1a1f12" opacity=".8"><circle cx="1200" cy="160" r="2"/><circle cx="1215" cy="150" r="2"/><circle cx="1230" cy="165" r="2"/><circle cx="1210" cy="175" r="2"/><circle cx="1240" cy="145" r="2"/><circle cx="1190" cy="140" r="2"/><circle cx="1255" cy="170" r="2"/></g>
+  <text x="800" y="860" fill="#b8c080" opacity=".5" font-family="monospace" font-size="24" text-anchor="middle">SECTOR 7 · 침수 구역 · 생명 반응 다수</text>
+  <text x="30" y="40" fill="#ffffff" opacity=".25" font-family="sans-serif" font-size="22">임시 이미지 — assets/images/scene4.svg</text>
+</svg>

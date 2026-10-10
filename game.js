@@ -247,6 +247,9 @@
     state.over = false;
     state.stats = clone(state.snapshot.stats);
     state.info = clone(state.snapshot.info);
+    // 다시 시작해도 바로 무너지지 않도록 최소 절반은 회복
+    const key = rules.gameOverStat, half = Math.ceil(GAME.stats[key].max / 2);
+    if (state.stats[key] < half) { state.stats[key] = half; state.snapshot.stats[key] = half; }
     addLog("장면 재시작", true);
     startScene(state.scene);
   });
@@ -413,7 +416,8 @@
       el.input.disabled = true;
       el.hintBtn.hidden = true;
       addLog(`${quiz.title || "퀴즈"} 통과`);
-      if (quiz.reward) applyStats(quiz.reward, "보상");
+      const reward = quiz.reward || rules.correctReward;
+      if (reward) applyStats(reward, "검사 통과");
     } else {
       state.wrong++;
       el.feedback.textContent = "▶ 오류. 응답이 일치하지 않습니다.";

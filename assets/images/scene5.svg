@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="75%"><stop offset="0" stop-color="#0c1517"/><stop offset="1" stop-color="#020303"/></radialGradient>
+    <radialGradient id="mars" cx="40%" cy="38%" r="65%"><stop offset="0" stop-color="#d0643a"/><stop offset=".7" stop-color="#7a2a18"/><stop offset="1" stop-color="#2a0c08"/></radialGradient>
+    <radialGradient id="earth" cx="40%" cy="38%" r="65%"><stop offset="0" stop-color="#5a5a3a"/><stop offset="1" stop-color="#14140c"/></radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="14"/></filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g stroke="#7fd6be" stroke-opacity=".08"><path d="M0 150 H1600 M0 300 H1600 M0 450 H1600 M0 600 H1600 M0 750 H1600 M200 0 V900 M400 0 V900 M600 0 V900 M800 0 V900 M1000 0 V900 M1200 0 V900 M1400 0 V900"/></g>
+  <circle cx="380" cy="470" r="150" fill="url(#earth)"/>
+  <path d="M290 420 l40 30 l-20 40 M420 380 l30 50 l50 10" stroke="#d13a46" stroke-width="3" fill="none" opacity=".7"/>
+  <circle cx="1220" cy="430" r="170" fill="#d0643a" opacity=".25" filter="url(#glow)"/>
+  <circle cx="1220" cy="430" r="160" fill="url(#mars)"/>
+  <path d="M560 440 Q800 250 1040 420" stroke="#7fd6be" stroke-width="3" stroke-dasharray="14 12" fill="none"/>
+  <path d="M1030 400 l16 24 l-28 4" fill="#7fd6be"/>
+  <g font-family="monospace" text-anchor="middle">
+    <text x="380" y="680" fill="#b0b090" opacity=".7" font-size="26">EARTH · 폐기 예정</text>
+    <text x="1220" y="680" fill="#e08060" opacity=".85" font-size="26">MARS · 이주지</text>
+    <text x="800" y="300" fill="#7fd6be" opacity=".8" font-size="28">PROJECT : RESET</text>
+    <text x="800" y="820" fill="#d13a46" opacity=".7" font-size="22">유전자 제공 의무 — 계약서 제 47조</text>
+  </g>
+  <text x="30" y="40" fill="#ffffff" opacity=".25" font-family="sans-serif" font-size="22">임시 이미지 — assets/images/scene5.svg</text>
+</svg>

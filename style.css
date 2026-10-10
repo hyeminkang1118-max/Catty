@@ -170,7 +170,7 @@ input:focus { border-color: var(--sys); box-shadow: 0 0 0 2px var(--sys-dim); }
 .quiz-box.solved .quiz-title { color: var(--sys); }
 .lock { animation: blink 1.2s infinite; }
 #quiz-question { font-family: var(--serif); font-size: 1.05rem; }
-.choices { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; margin-bottom: 8px; }
+.choices { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px; margin-bottom: 8px; word-break: keep-all; }
 .choice.correct { border-color: var(--sys); color: var(--sys); background: var(--sys-dim); opacity: 1; }
 .choice.wrong { border-color: var(--warn); color: var(--warn); }
 #quiz-form { display: flex; gap: 8px; }

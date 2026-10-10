@@ -40,6 +40,7 @@ const GAME = {
   // 게임 규칙
   rules: {
     wrongPenalty: { mind: -5 },  // 오답 시
+    correctReward: { mind: +5 }, // 정답 시 (퀴즈마다 reward 로 따로 지정 가능)
     hintCost: { mind: -3 },      // 힌트를 볼 때
     gameOverStat: "mind",        // 이 능력치가 0이 되면 게임 오버 (장면 처음부터 다시). 끄려면 null
   },
@@ -121,6 +122,66 @@ const GAME = {
         choices: ["1/10", "1/50", "1/100", "1/1000"],
         answer: "1/100",
         hint: "연구원의 설명을 다시 떠올려 보세요.",
+      },
+    },
+    // ───────────────────────── 3장 · 바깥 세상 ─────────────────────────
+    {
+      chapter: "CHAPTER 3 · 바깥 세상",
+      info: { 위치: "연구소 외곽", 상태: "충격" },
+      media: { type: "image", src: "assets/images/scene4.svg" },
+      music: "assets/music/outside.mp3",
+      lines: [
+        { text: "연구소 밖에는 처참한 광경이 깔려 있었다.", effect: "flash" },
+        "물에 잠긴 건물들, 관리되지 않은 잡초들과 병든 동물들,",
+        { text: "오염된 오수에서 나는 고약한 악취와 정체를 알 수 없는 해충떼들…", stats: { infect: +5 }, effect: "glitch" },
+        { system: "[SYSTEM] 경고: 외부 대기 노출\n감염도가 상승합니다.", effect: "alarm", stats: { infect: +5 } },
+        "그러나 가장 놀란 것은 살아남았다는 인간들이었다.",
+        { text: "인간들은 이런 지구에서 살아남기 위해 스스로 퇴화하는 것을 선택했다.", stats: { mind: -5 } },
+        "오염된 물 위를 떠다니는 인간들은 물에 잘 뜨기 위해 물고기와 비슷한 형상으로 변해 있었다.",
+        "그들은 이따금씩 물 위에 떠다니는 물고기를 낚아채서 입 안으로 삼켰다.",
+        { text: "입 안은 펠리컨처럼 크게 늘어나 있었고, 소화가 잘 되기 위해 부푼 배가 볼록하게 튀어나와 있었다.", effect: "shake", stats: { mind: -5 } },
+        "피부는 강력한 모기에 물리지 않기 위해서 두껍고 딱딱하게 변해 있었다.",
+        { speaker: "{name}", text: "이건 말도 안돼.", effect: "glitch", stats: { mind: -5 } },
+        "나는 너무 놀라 중얼거렸다.",
+      ],
+      // ※ 임시 퀴즈 — 원하는 문제로 바꿔 주세요
+      quiz: {
+        title: "생태 관찰 기록 03",
+        question: "물 위의 인간들의 피부가 두껍고 딱딱하게 변한 이유는 무엇입니까?",
+        choices: ["추위를 견디기 위해", "모기에 물리지 않기 위해", "물에 잘 뜨기 위해", "햇빛을 막기 위해"],
+        answer: "모기에 물리지 않기 위해",
+        hint: "그들을 괴롭히는 작은 존재를 떠올려 보세요.",
+      },
+    },
+
+    // ───────────────────────── 4장 · 계약 ─────────────────────────
+    {
+      chapter: "CHAPTER 4 · 계약",
+      info: { 위치: "연구소 외곽", 상태: "혼란" },
+      media: { type: "image", src: "assets/images/scene5.svg" },
+      music: "assets/music/contract.mp3",
+      lines: [
+        { system: "[SYSTEM] 인물 정보 갱신\n연구원 → 「루나」" },
+        "연구소의 루나는 내게 말했다.",
+        { speaker: "루나", text: "당신은 30년 전의 인간의 원형을 유지하는 몇 안 되는 인간이에요." },
+        { speaker: "루나", text: "많이 슬프고 힘들겠지만 당신의 부모도, 친구들도 모두 다 저렇게 변해버렸어요.", effect: "glitch", stats: { mind: -15 } },
+        { speaker: "루나", text: "이제 당신은 우리 연구소와 함께 다시 인간을 되찾는 프로젝트에 참여하게 될 거예요." },
+        { speaker: "{name}", text: "제가요? 아니, 저는 그런 거에 동의한 적 없는데요." },
+        { speaker: "루나", text: "30년 전 냉동인간이 되겠다고 하셨을 때 서명하셨어요.", effect: "shake" },
+        { system: "[PERFECT HUMAN PROJECT]\n계약서 제 47조 — 피험자는 해동 이후 프로젝트에 협조할 의무를 진다.", effect: "alarm" },
+        { speaker: "{name}", text: "휴, 결국 그런 독소조항이 있었군요. 그런데 어떻게요?", stats: { mind: -5 } },
+        { speaker: "루나", text: "우리는 지구를 리셋할 거예요.", effect: "flash" },
+        { speaker: "루나", text: "살아남은 몇몇의 인간들만 데리고 지구를 버리고 화성으로 가는 거죠." },
+        { speaker: "루나", text: "그곳에서 위대한 인류의 자손을 이어가다가, 지구가 오랜 시간에 걸쳐 생태계를 회복한 후 다시 돌아올 겁니다." },
+        { speaker: "루나", text: "그러기 위해 우리 기업에 당신은 유전자를 제공해야 할 의무가 있어요.", effect: "glitch", info: { 상태: "유전자 제공 의무 발생" } },
+        { system: "[SYSTEM] 칭호 변경: 「인류의 마지막 표본」 → 「유전자 제공자」", info: { 칭호: "유전자 제공자" } },
+      ],
+      // ※ 임시 퀴즈 — 원하는 문제로 바꿔 주세요
+      quiz: {
+        title: "유전자 제공 동의서",
+        question: "인류 이주 계획의 목적지를 입력하십시오.",
+        answer: ["화성", "mars"],
+        hint: "붉은 행성입니다.",
       },
     },
   ],
