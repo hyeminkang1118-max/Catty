@@ -8,7 +8,7 @@
 <path d="M65 340 Q65 270 135 262 Q205 270 205 340 Z" fill="#2a3436"/>
 <circle cx="122" cy="206" r="4" fill="#5fb8ff"/><circle cx="148" cy="206" r="4" fill="#5fb8ff"/>
 <text x="260" y="170" fill="#6a7577" font-family="'Nanum Gothic', 'Apple SD Gothic Neo', sans-serif" font-size="22">소속 · 퍼펙트 휴먼 관리부</text>
-<text x="260" y="236" fill="#e8eeee" font-family="'Nanum Gothic Coding', monospace" font-size="64" font-weight="bold" letter-spacing="8">LUNA</text>
+<text x="260" y="236" fill="#e0303c" font-family="'Nanum Gothic Coding', monospace" font-size="64" font-weight="bold" letter-spacing="8">LUNA</text>
 <text x="260" y="280" fill="#6a7577" font-family="'Nanum Gothic', 'Apple SD Gothic Neo', sans-serif" font-size="22">연구원 루나</text>
 <rect x="50" y="380" width="760" height="110" fill="#050808" stroke="#7fd6be" stroke-opacity=".4" stroke-width="2" stroke-dasharray="8 6"/>
 <text x="80" y="420" fill="#6a7577" font-family="'Nanum Gothic Coding', monospace" font-size="20">사번 EMPLOYEE No.</text>

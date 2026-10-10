@@ -1,17 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900"><defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#121410"/><stop offset="1" stop-color="#36301f"/></linearGradient></defs>
 <rect width="1600" height="900" fill="url(#sky)"/>
 <path d="M0 760 Q800 640 1600 760 L1600 900 L0 900 Z" fill="#1a1f15"/>
-<path d="M480 760 L480 420 L800 220 L1120 420 L1120 760 Z" fill="#2a2a26"/>
-<path d="M1120 420 L1040 470 L1080 560 L1000 620 L1120 680 Z" fill="#1a1c18"/>
-<rect x="740" y="80" width="120" height="200" fill="#2e2e2a"/>
-<path d="M730 90 L800 20 L870 90 Z" fill="#26261f"/>
-<g transform="translate(790 26)"><path d="M0 10 Q10 -8 30 -2 L42 -10 L38 4 Q44 14 34 22 L8 22 Z" fill="#050505"/></g>
-<circle cx="800" cy="440" r="80" fill="#121410" stroke="#3a3a30" stroke-width="10"/>
-<path d="M800 440 L800 370 A70 70 0 0 1 855 396 Z" fill="#3a8a4a" opacity=".7"/><path d="M800 440 L855 396 A70 70 0 0 1 868 456 Z" fill="#b8303a" opacity=".7"/><path d="M800 440 L868 456 A70 70 0 0 1 830 503 Z" fill="#7a4ab0" opacity=".7"/><path d="M800 440 L830 503 A70 70 0 0 1 770 503 Z" fill="#d8c040" opacity=".7"/><path d="M800 440 L770 503 A70 70 0 0 1 732 456 Z" fill="#2a2a80" opacity=".7"/><path d="M800 440 L732 456 A70 70 0 0 1 745 396 Z" fill="#d8782a" opacity=".7"/><path d="M800 440 L745 396 A70 70 0 0 1 800 370 Z" fill="#3a6ad0" opacity=".7"/>
-<path d="M720 760 L720 600 Q800 530 880 600 L880 760 Z" fill="#14120e"/>
-<rect x="780" y="660" width="40" height="26" fill="#3a4a40" stroke="#7fd6be" stroke-opacity=".5"/>
-<rect x="620" y="330" width="360" height="56" fill="#1a1a16"/>
-<text x="800" y="370" fill="#c8b890" font-family="'Nanum Gothic', 'Apple SD Gothic Neo', sans-serif" font-size="38" font-weight="bold" text-anchor="middle" letter-spacing="14">아라랏</text>
-<line x1="640" y1="358" x2="960" y2="345" stroke="#555" stroke-width="3" opacity=".5"/>
+<path d="M480 760 L480 420 L800 200 L1120 420 L1120 760 Z" fill="#2a2a26"/>
+<path d="M1120 420 L1050 460 L1090 560 L1020 640 L1120 690 Z" fill="#1a1c18"/>
+<rect x="740" y="60" width="120" height="200" fill="#2e2e2a"/>
+<path d="M730 70 L800 0 L870 70 Z" fill="#26261f"/>
+<g transform="translate(790 6)"><path d="M0 10 Q10 -8 30 -2 L42 -10 L38 4 Q44 14 34 22 L8 22 Z" fill="#050505"/></g>
+<circle cx="800" cy="330" r="68" fill="#121410" stroke="#3a3a30" stroke-width="10"/>
+<path d="M800 330 L800 272 A58 58 0 0 1 845 294 Z" fill="#1aa39a" opacity=".8" stroke="#141410" stroke-width="3"/><path d="M800 330 L845 294 A58 58 0 0 1 857 343 Z" fill="#ece8dc" opacity=".8" stroke="#141410" stroke-width="3"/><path d="M800 330 L857 343 A58 58 0 0 1 825 382 Z" fill="#9acd32" opacity=".8" stroke="#141410" stroke-width="3"/><path d="M800 330 L825 382 A58 58 0 0 1 775 382 Z" fill="#e86a9a" opacity=".8" stroke="#141410" stroke-width="3"/><path d="M800 330 L775 382 A58 58 0 0 1 743 343 Z" fill="#8a44c8" opacity=".8" stroke="#141410" stroke-width="3"/><path d="M800 330 L743 343 A58 58 0 0 1 755 294 Z" fill="#d4a52a" opacity=".8" stroke="#141410" stroke-width="3"/><path d="M800 330 L755 294 A58 58 0 0 1 800 272 Z" fill="#9a6436" opacity=".8" stroke="#141410" stroke-width="3"/>
+<ellipse cx="566" cy="500" rx="44" ry="56" fill="#e86a9a" opacity=".18"/><path d="M538 540 L538 482 Q566 440 594 482 L594 540 Z" fill="#e86a9a" stroke="#141410" stroke-width="5"/><line x1="566" y1="456" x2="566" y2="540" stroke="#141410" stroke-width="3" opacity=".6"/><ellipse cx="644" cy="500" rx="44" ry="56" fill="#1aa39a" opacity=".18"/><path d="M616 540 L616 482 Q644 440 672 482 L672 540 Z" fill="#1aa39a" stroke="#141410" stroke-width="5"/><line x1="644" y1="456" x2="644" y2="540" stroke="#141410" stroke-width="3" opacity=".6"/><ellipse cx="722" cy="500" rx="44" ry="56" fill="#d4a52a" opacity=".18"/><path d="M694 540 L694 482 Q722 440 750 482 L750 540 Z" fill="#d4a52a" stroke="#141410" stroke-width="5"/><line x1="722" y1="456" x2="722" y2="540" stroke="#141410" stroke-width="3" opacity=".6"/><ellipse cx="800" cy="500" rx="44" ry="56" fill="#ece8dc" opacity=".18"/><path d="M772 540 L772 482 Q800 440 828 482 L828 540 Z" fill="#ece8dc" stroke="#141410" stroke-width="5"/><line x1="800" y1="456" x2="800" y2="540" stroke="#141410" stroke-width="3" opacity=".6"/><ellipse cx="878" cy="500" rx="44" ry="56" fill="#9a6436" opacity=".18"/><path d="M850 540 L850 482 Q878 440 906 482 L906 540 Z" fill="#9a6436" stroke="#141410" stroke-width="5"/><line x1="878" y1="456" x2="878" y2="540" stroke="#141410" stroke-width="3" opacity=".6"/><ellipse cx="956" cy="500" rx="44" ry="56" fill="#9acd32" opacity=".18"/><path d="M928 540 L928 482 Q956 440 984 482 L984 540 Z" fill="#9acd32" stroke="#141410" stroke-width="5"/><line x1="956" y1="456" x2="956" y2="540" stroke="#141410" stroke-width="3" opacity=".6"/><ellipse cx="1034" cy="500" rx="44" ry="56" fill="#8a44c8" opacity=".18"/><path d="M1006 540 L1006 482 Q1034 440 1062 482 L1062 540 Z" fill="#8a44c8" stroke="#141410" stroke-width="5"/><line x1="1034" y1="456" x2="1034" y2="540" stroke="#141410" stroke-width="3" opacity=".6"/>
+<rect x="650" y="556" width="300" height="40" fill="#1a1a16"/>
+<text x="800" y="586" fill="#c8b890" font-family="'Nanum Gothic', 'Apple SD Gothic Neo', sans-serif" font-size="28" font-weight="bold" text-anchor="middle" letter-spacing="12">아라랏</text>
+<path d="M730 760 L730 660 Q800 600 870 660 L870 760 Z" fill="#14120e"/>
+<rect x="782" y="690" width="36" height="22" fill="#3a4a40" stroke="#7fd6be" stroke-opacity=".5"/>
 <text x="30" y="880" fill="#fff" opacity=".22" font-family="'Nanum Gothic', 'Apple SD Gothic Neo', sans-serif" font-size="22">임시 이미지 — assets/images/church.svg</text>
 </svg>
