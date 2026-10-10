@@ -3,61 +3,106 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Catty 방탈출</title>
+  <title>PERFECT HUMAN</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&family=Nanum+Myeongjo:wght@400;700&display=swap" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- 시작 화면 -->
-  <section id="start-screen" class="screen active">
-    <h1 id="game-title"></h1>
-    <p id="game-subtitle"></p>
-    <button id="start-btn" class="btn primary">시작하기</button>
-    <button id="continue-btn" class="btn" hidden>이어하기</button>
-    <p class="note">🔊 소리를 켜고 플레이하세요</p>
-  </section>
-
-  <!-- 게임 화면 -->
-  <section id="game-screen" class="screen">
-    <header class="topbar">
-      <span id="chapter-label"></span>
-      <div class="progress"><div id="progress-bar"></div></div>
-      <button id="mute-btn" class="icon-btn" title="음악 켜기/끄기">🔊</button>
-    </header>
-
-    <div id="media-box" class="media-box"></div>
-
-    <div class="story-box">
-      <p id="story-text"></p>
-      <button id="next-line-btn" class="btn">다음 ▶</button>
-    </div>
-
-    <!-- 퀴즈 -->
-    <div id="quiz-box" class="quiz-box" hidden>
-      <h2>🔒 잠긴 문</h2>
-      <p id="quiz-question"></p>
-      <div id="quiz-choices" class="choices"></div>
-      <form id="quiz-form" autocomplete="off">
-        <input id="quiz-input" type="text" placeholder="정답 입력" />
-        <button class="btn primary" type="submit">확인</button>
+  <div id="app">
+    <!-- 시작 화면 -->
+    <section id="start-screen" class="screen active">
+      <p class="boot" id="boot-log"></p>
+      <h1 class="glitch" id="game-title"></h1>
+      <p id="game-subtitle" class="subtitle"></p>
+      <form id="name-form" class="name-form" autocomplete="off">
+        <label for="name-input">피험자 이름을 입력하십시오</label>
+        <input id="name-input" maxlength="10" placeholder="이름" />
+        <button class="btn primary" type="submit">▶ 해동 시작</button>
       </form>
-      <p id="quiz-feedback" aria-live="polite"></p>
-      <button id="hint-btn" class="btn small" type="button">💡 힌트 보기</button>
-      <p id="quiz-hint" hidden></p>
+      <button id="continue-btn" class="btn" hidden>이어하기</button>
+      <p class="note">🎧 이어폰을 착용하고 소리를 켜 주세요</p>
+    </section>
+
+    <!-- 게임 화면 -->
+    <section id="game-screen" class="screen">
+      <header class="topbar">
+        <span id="chapter-label"></span>
+        <div class="progress"><div id="progress-bar"></div></div>
+        <button id="mute-btn" class="icon-btn" title="소리 켜기/끄기">🔊</button>
+      </header>
+
+      <div class="layout">
+        <!-- 상태창 -->
+        <aside class="status" id="status">
+          <button class="status-head" id="status-toggle" type="button">
+            <span>[ 상태창 ]</span><span class="caret">▾</span>
+          </button>
+          <div class="profile">
+            <div class="avatar" aria-hidden="true"></div>
+            <div>
+              <div class="pname" id="status-name"></div>
+              <div class="pid" id="status-id"></div>
+            </div>
+          </div>
+          <div class="bars" id="status-bars"></div>
+          <dl class="info" id="status-info"></dl>
+          <div class="log-title">SYSTEM LOG</div>
+          <ul class="log" id="status-log"></ul>
+        </aside>
+
+        <main class="main">
+          <div id="media-box" class="media-box"></div>
+
+          <div class="dialogue" id="dialogue" tabindex="0">
+            <div class="speaker" id="speaker" hidden></div>
+            <p id="story-text"></p>
+            <span class="advance" id="advance">▼</span>
+          </div>
+
+          <!-- 퀴즈 -->
+          <div id="quiz-box" class="quiz-box" hidden>
+            <div class="quiz-title"><span class="lock">■</span> <span id="quiz-title"></span></div>
+            <p id="quiz-question"></p>
+            <div id="quiz-choices" class="choices"></div>
+            <form id="quiz-form" autocomplete="off">
+              <input id="quiz-input" type="text" placeholder="> 답 입력" />
+              <button class="btn primary" type="submit">확인</button>
+            </form>
+            <p id="quiz-feedback" aria-live="polite"></p>
+            <button id="hint-btn" class="btn small" type="button"></button>
+            <p id="quiz-hint" hidden></p>
+          </div>
+
+          <button id="next-scene-btn" class="btn primary next-scene" hidden disabled></button>
+        </main>
+      </div>
+    </section>
+
+    <!-- 엔딩 화면 -->
+    <section id="end-screen" class="screen">
+      <h1 class="glitch" id="end-title"></h1>
+      <p id="end-text" class="subtitle"></p>
+      <p id="end-stats" class="note"></p>
+      <button id="restart-btn" class="btn primary">처음부터 다시</button>
+    </section>
+  </div>
+
+  <!-- 게임 오버 -->
+  <div id="gameover" class="overlay" hidden>
+    <div class="overlay-box">
+      <h2 class="glitch" data-text="정신 붕괴">정신 붕괴</h2>
+      <p>더 이상 버틸 수 없다… 시야가 어두워진다.</p>
+      <button id="retry-btn" class="btn primary">이 장면 다시 시작</button>
     </div>
+  </div>
 
-    <button id="next-scene-btn" class="btn primary next-scene" disabled>🔒 다음 방으로</button>
-  </section>
-
-  <!-- 엔딩 화면 -->
-  <section id="end-screen" class="screen">
-    <h1>🎉 탈출 성공!</h1>
-    <p id="end-text"></p>
-    <p id="end-stats"></p>
-    <button id="restart-btn" class="btn primary">처음부터 다시</button>
-  </section>
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+  <div class="fx-scanlines" aria-hidden="true"></div>
+  <div class="fx-vignette" aria-hidden="true"></div>
+  <div class="fx-flash" id="fx-flash" aria-hidden="true"></div>
 
   <audio id="bgm" loop></audio>
-  <audio id="sfx"></audio>
 
   <script src="story.js"></script>
   <script src="game.js"></script>

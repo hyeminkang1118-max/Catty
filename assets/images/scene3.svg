@@ -1,7 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
-  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1f1430"/><stop offset="1" stop-color="#5a3a7a"/></linearGradient></defs>
-  <rect width="1600" height="900" fill="url(#g)"/>
-  <text x="800" y="460" font-size="260" text-anchor="middle">🎹</text>
-  <text x="800" y="640" font-size="64" fill="#ece8f5" text-anchor="middle" font-family="sans-serif">2번 방 · 음악실</text>
-  <text x="800" y="720" font-size="32" fill="#ece8f5" fill-opacity=".6" text-anchor="middle" font-family="sans-serif">(임시 이미지 — assets/images/scene3.svg 를 교체하세요)</text>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a1210"/><stop offset=".55" stop-color="#5a3518"/><stop offset=".75" stop-color="#7a4a1c"/><stop offset="1" stop-color="#1c0f08"/></linearGradient>
+    <radialGradient id="sun" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#e09040" stop-opacity=".7"/><stop offset="1" stop-color="#e09040" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="#050404"/>
+  <rect x="160" y="90" width="1280" height="620" fill="url(#sky)"/>
+  <circle cx="1050" cy="420" r="200" fill="url(#sun)"/>
+  <g fill="#120a07">
+    <path d="M160 710 L160 470 L230 470 L230 420 L290 420 L290 520 L360 520 L360 360 L400 340 L440 360 L440 560 L520 560 L520 450 L560 400 L600 450 L600 600 L700 600 L700 300 L720 280 L760 290 L760 610 L860 610 L860 480 L930 480 L930 380 L960 330 L990 400 L990 590 L1080 590 L1080 510 L1150 470 L1150 620 L1230 620 L1230 400 L1300 400 L1300 560 L1440 560 L1440 710 Z"/>
+  </g>
+  <g stroke="#120a07" stroke-width="5"><line x1="720" y1="280" x2="690" y2="230"/><line x1="960" y1="330" x2="985" y2="270"/></g>
+  <g fill="#c9a070" opacity=".12"><rect x="160" y="250" width="1280" height="3"/><rect x="160" y="520" width="1280" height="2"/></g>
+  <rect x="140" y="70" width="1320" height="660" fill="none" stroke="#1d1a19" stroke-width="40"/>
+  <line x1="800" y1="90" x2="800" y2="710" stroke="#1d1a19" stroke-width="24"/>
+  <path d="M820 140 L900 230 L870 260 L960 360" stroke="#c9b9a8" stroke-opacity=".35" stroke-width="2" fill="none"/>
+  <text x="800" y="800" fill="#d8a060" opacity=".6" font-family="monospace" font-size="26" text-anchor="middle">외부 대기 — 생존 불가 · AQI ███</text>
+  <text x="30" y="880" fill="#ffffff" opacity=".25" font-family="sans-serif" font-size="22">임시 이미지 — assets/images/scene3.svg</text>
 </svg>
