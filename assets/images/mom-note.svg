@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="660" viewBox="0 0 900 660"><defs><linearGradient id="p" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e6dcc0"/><stop offset="1" stop-color="#cbbd98"/></linearGradient></defs>
+<rect width="900" height="660" fill="#0d0c0a"/>
+<g transform="rotate(-1.2 450 330)">
+<rect x="70" y="55" width="760" height="555" fill="url(#p)"/>
+<g stroke="#9db0c0" stroke-opacity=".5" stroke-width="2"><line x1="70" y1="142" x2="830" y2="142"/><line x1="70" y1="202" x2="830" y2="202"/><line x1="70" y1="262" x2="830" y2="262"/><line x1="70" y1="322" x2="830" y2="322"/><line x1="70" y1="382" x2="830" y2="382"/><line x1="70" y1="442" x2="830" y2="442"/><line x1="70" y1="502" x2="830" y2="502"/></g>
+<g fill="#2a2418" font-family="'Nanum Pen Script', 'Nanum Myeongjo', serif" font-size="30"><text x="100" y="130">네가 어릴 때 잠 못 들면 늘 들려주던 이야기</text><text x="100" y="190">기억나니? 비가 그치자 노아는 먼저</text><text x="100" y="250">까마귀를 날려 보냈어. 그다음엔 비둘기를</text><text x="100" y="310">보냈는데, 앉을 곳이 없어 돌아왔지.</text><text x="100" y="370">다시 보낸 비둘기는 올리브 잎을 물고</text><text x="100" y="430">돌아왔단다. 그리고 하늘에 무지개가 떴어.</text><text x="100" y="490">다시는 버리지 않겠다는 약속이었지.</text>
+<text x="800" y="560" text-anchor="end">— 엄마</text></g></g>
+</svg>
